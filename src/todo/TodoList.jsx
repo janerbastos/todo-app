@@ -1,4 +1,5 @@
 import React from 'react'
+import IconButton from '../templates/IconButton'
 
 export default props => {
     const renderRows = () => {
@@ -6,6 +7,8 @@ export default props => {
         return list.map(todo => (
             <tr key={todo.id}>
                 <td>{todo.description}</td>
+                <td><IconButton style='danger' icon='trash-o'
+                    onClick={() => props.handleRemove(todo)}/></td>
             </tr>
         ))
     }
@@ -15,6 +18,7 @@ export default props => {
             <thead>
                 <tr>
                     <th>Descrição</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
