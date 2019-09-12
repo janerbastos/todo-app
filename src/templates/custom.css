@@ -2,3 +2,12 @@
     text-decoration: line-through;
     color: #777;
 }
+
+.tableActions{
+    width: 130px;
+}
+
+.todoForm{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
