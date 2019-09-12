@@ -24,8 +24,8 @@ export default class Todo extends Component{
     }
 
     refresh(description=''){
-        const search = description ? `&description=/${description}/` : ''
-        axios.get(`${URL}?sort=-createAt${search}`)
+        const search = description ? `&q=${description}` : ''
+        axios.get(`${URL}?_sort=createAt&_order=DESC${search}`)
             .then(resp => this.setState({...this.state, description, list: resp.data}))
     }
 
