@@ -12,7 +12,7 @@ class TodoForm extends Component {
         this.keyHandler = this.keyHandler.bind(this)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.search()
     }
 
@@ -49,4 +49,5 @@ class TodoForm extends Component {
 
 const mapStateToProps = state => ({ description: state.todo.description })
 const mapDispatchToProps = dispatch => bindActionCreators({changeDescription, search}, dispatch)
+
 export default connect(mapStateToProps, mapDispatchToProps)(TodoForm)

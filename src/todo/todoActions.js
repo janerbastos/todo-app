@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const URL = 'http://localhost:3000/todos'
+const URL = 'http://localhost:3001/todos'
 
 export const changeDescription = (event) => ({
     type: 'DESCRIPTION_CHANGED',
@@ -8,9 +8,9 @@ export const changeDescription = (event) => ({
 })
 
 export const search = () => {
-    const request = axios.get(`${URL}?_sort=createAt`)
+    const request = axios.get(`${URL}`)
     return {
-        type: 'SEARCH',
+        type: 'TODO_SEARCHED',
         payload: request
     }
 }

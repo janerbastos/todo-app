@@ -5,7 +5,7 @@ import PageHeader from '../templates/PageHeader'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 
-const URL = 'http://localhost:3001/todos'
+//const URL = 'http://localhost:3001/todos'
 
 export default class Todo extends Component{
 
@@ -20,7 +20,7 @@ export default class Todo extends Component{
         this.handleRemove = this.handleRemove.bind(this)
         this.handleMarkAsDone = this.handleMarkAsDone.bind(this)
         this.handleMarkAsPending = this.handleMarkAsPending.bind(this)
-        this.refresh()
+        
     }
 
     refresh(description=''){
@@ -66,15 +66,8 @@ export default class Todo extends Component{
         return(
             <div>
                 <PageHeader name='Tarefas' small='Cadastro' />
-                <TodoForm description={this.state.description}
-                    handleAdd={this.handleAdd}
-                    handleChange={this.handleChange}
-                    handleSearch={this.handleSearch}
-                    handleClear={this.handleClear} />
-                <TodoList list={this.state.list}
-                    handleMarkAsDone={this.handleMarkAsDone}
-                    handleMarkAsPending={this.handleMarkAsPending}
-                    handleRemove={this.handleRemove} />
+                <TodoForm  />
+                <TodoList  />
             </div>
         )
     }
