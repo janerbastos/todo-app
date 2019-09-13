@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 import PageHeader from '../templates/PageHeader'
 import TodoForm from './TodoForm'
